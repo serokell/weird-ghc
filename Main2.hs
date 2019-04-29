@@ -1,4 +1,4 @@
-{-# LANGUAGE TypeFamilies, DataKinds, GADTs #-}
+{-# LANGUAGE GADTs #-}
 
 module Main
   ( main
