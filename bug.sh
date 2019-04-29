@@ -19,9 +19,9 @@ main="Main$1"
 ghc --make $main.hs && ./$main
 
 # Do the magic
-sed -i -e 's/= KvInt/= KvInt . succ/' KValue.hs
+sed -i -e 's/{- . succ -}/. succ/' MyInteger.hs
 
 ghc --make $main.hs && ./$main  || true  # fails
 
 # Undo the magic for future runs
-sed -i -e 's/= KvInt . succ/= KvInt/' KValue.hs
+sed -i -e 's/. succ/{- . succ -}/' MyInteger.hs

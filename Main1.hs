@@ -1,13 +1,11 @@
-{-# LANGUAGE GADTs #-}
-
 module Main
   ( main
   ) where
 
-import KValue (KValue (KvInt), toKVal)
+import MyInteger (MyInteger (MyInteger), toMyInteger)
 
 
 main :: IO ()
 main = do
-  let (KvInt i) = toKVal (41 :: Integer)
+  let (MyInteger i) = toMyInteger (41 :: Integer)
   print i
