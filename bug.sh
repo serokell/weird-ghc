@@ -15,8 +15,9 @@ fi
 
 main="Main$1"
 
+set -x
 
-ghc --make $main.hs && ./$main
+ghc --make $main.hs; ./$main
 
 # Do the magic
 sed -i -e 's/{- . succ -}/. succ/' MyInteger.hs
